@@ -1,0 +1,116 @@
+/* TopReviews.css */
+#top-reviews-section {
+    margin: 32px 0;
+    padding: 16px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+  }
+  
+  #top-reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  #action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .view-all-btn,
+  .submit-review-btn {
+    padding: 12px 24px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .submit-review-btn {
+    background-color: #3b82f6;
+  }
+  
+  .view-all-btn:hover,
+  .submit-review-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Modal styles */
+  #top-reviews-modal {
+    width: 50vw;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+  
+  #top-reviews-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  #top-reviews-modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  #top-reviews-modal .rating {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  
+  #top-reviews-modal button {
+    padding: 10px 20px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  #top-reviews-modal button:hover {
+    opacity: 0.9;
+  }
+  
+  #top-reviews-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  #top-reviews-action-buttons .view-all-btn,
+  #top-reviews-action-buttons .submit-review-btn {
+    padding: 12px 24px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #top-reviews-action-buttons .submit-review-btn {
+    background-color: #3b82f6;
+  }
+  
+  #top-reviews-action-buttons .view-all-btn:hover,
+  #top-reviews-action-buttons .submit-review-btn:hover {
+    opacity: 0.9;
+  }
+  
