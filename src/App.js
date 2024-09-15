@@ -24,6 +24,7 @@ import OfficeDelivery from './Pages/ServicePages/OfficeDelivery';
 import TableSetUp from './Pages/ServicePages/TableSetUp';
 import BackdropHiring from './Pages/ServicePages/BackdropHire';
 import AllReviews from './Pages/AllReviews';
+import TopReviews from './Components/Review/TopReviews';
 
 import Booking from './Pages/Booking';
 import SignUp from './Components/SignUp/SignUp';
@@ -40,6 +41,8 @@ function App() {
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/connect" element={<ContactPage />} />
             <Route path="/gallery" element={<GalleryMain />} />
+            {/* Route to handle review submission */}
+            <Route path="/review" component={TopReviews} />
             <Route path="/reviews" element={<AllReviews />} />
 
             <Route path="/decorations" element={<Decorations />} />

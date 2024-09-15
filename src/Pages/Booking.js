@@ -30,7 +30,9 @@ const Booking = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    console.log("Form Data Submitted:", formData);  // Debugging: Log form data before submission
+
     try {
       const response = await fetch('http://localhost:8000/api/bookings/create/', {
         method: 'POST',
@@ -43,12 +45,15 @@ const Booking = () => {
       if (response.ok) {
         const newBooking = await response.json();
         console.log('Booking successful:', newBooking);
-        // You can redirect or show a success message here
+        alert('Booking created successfully!');
       } else {
-        console.error('Booking failed');
+        const errorData = await response.json();
+        console.error('Booking failed:', errorData);
+        alert('Booking failed: ' + JSON.stringify(errorData));
       }
     } catch (error) {
       console.error('An error occurred', error);
+      alert('An error occurred while creating the booking.');
     }
   };
 
@@ -142,7 +147,7 @@ const Booking = () => {
         </section>
       </body>
     </>
-  )
-}
+  );
+};
 
 export default Booking;

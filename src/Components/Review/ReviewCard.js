@@ -44,7 +44,7 @@ const ReviewCard = ({ reviewerName, reviewText, rating }) => {
       </svg>
 
       <h3>{reviewerName}</h3>
-      <p>{reviewText}</p>
+      <p style={{textAlign: 'center'}}>{reviewText}</p>
       <div style={{ marginTop: "5px", fontSize: "16px" }}>
         <span>{`${"⭐".repeat(rating)} (${rating}/5)`}</span>
       </div>

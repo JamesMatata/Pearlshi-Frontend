@@ -53,7 +53,8 @@ const AllReviews = () => {
     );
   }
 
-  // Main content for the reviews page
+  if (reviews.length != 0){
+    // Main content for the reviews page
   return (
     <>
       <Helmet>
@@ -62,7 +63,7 @@ const AllReviews = () => {
       <body className='bg-[#F5F2FB] w-full mt-[80px] md:mt-[100px] lg:mt-[125px]'>
         <div className="all-reviews-page">
           <h2 className="text-3xl font-bold text-center my-5">All Reviews</h2>
-          <div className="reviews-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          <div style={{display: 'flex', flexDirection: 'row',gap: '16px',padding: '10px', marginBottom: '50px' }}>
             {reviews.map((review, index) => (
               <ReviewCard
                 key={index}
@@ -76,6 +77,22 @@ const AllReviews = () => {
       </body>
     </>
   );
+  }
+
+  if (reviews.length == 0){
+    // Main content for the reviews page
+  return (
+    <>
+      <Helmet>
+        <title>All Reviews | Pearlshi Caterers & Event Planners</title>
+      </Helmet>
+      <body className='bg-[#F5F2FB] w-full mt-[80px] md:mt-[100px] lg:mt-[125px]'>
+          <h3 style={{padding: '70px 0', marginBottom: '600px',fontSize: '30px', fontWeight: 'bold', color: '#3b82f6', textAlign: 'center'}}>No Revies have been Made yet</h3>
+      </body>
+    </>
+  );
+  }
+
 };
 
 export default AllReviews;
