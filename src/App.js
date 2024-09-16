@@ -42,7 +42,7 @@ function App() {
             <Route path="/connect" element={<ContactPage />} />
             <Route path="/gallery" element={<GalleryMain />} />
             {/* Route to handle review submission */}
-            <Route path="/review" component={TopReviews} />
+            <Route path="/review" element={<TopReviews />} />
             <Route path="/reviews" element={<AllReviews />} />
 
             <Route path="/decorations" element={<Decorations />} />
